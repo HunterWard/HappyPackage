@@ -1,8 +1,18 @@
+/**
+ * appinfo.js
+ *
+ * Helper file to get application info straight from application files.
+ */
 import * as bin from './bin'
 
 const fs = require('fs');
 const sizer = require('get-folder-size')
 
+/** Base Driver Function to get App Info
+ *
+ * @param {string} path Path to App
+ * @returns App Object
+ */
 function getAppInfo(path){
     var app = {};
 
@@ -25,12 +35,16 @@ function getAppInfo(path){
     })
 
     app['name'] = getAppName(path, app['id']).trim();
-
     return app;
 
 
 }
 
+/** Find whether an APP is a licensed game or Homebrew
+ *
+ * @param {string} firstFour First four characters in app ID
+ * @returns 0 if Licensed, 1 if Homebrew
+ */
 function getAppType(firstFour) {
     if (firstFour === 'PCSA' ||
         firstFour === 'PCSE' ||
@@ -42,12 +56,23 @@ function getAppType(firstFour) {
     }
 }
 
-function getAppName(paramBIN, id) {
-    return bin.getHeadInfo(paramBIN)
+/** Function to attempt to extract app name from binary files
+ *
+ * @param {*} path App Path
+ * @param {*} id App Id
+ * @returns Name of app if found else ''
+ */
+function getAppName(path, id) {
+    return bin.getHeadInfo(path)
 }
 
-function getAppId(pathString) {
-    return pathString.split('\\')[2];
+/** Get App ID from apps folder name
+ *
+ * @param {string} path App Path
+ * @returns ID of app
+ */
+function getAppId(path) {
+    return path.split('\\')[2];
 }
 
 
