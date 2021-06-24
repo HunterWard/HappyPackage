@@ -4,7 +4,7 @@ Vita / PS3 Package Manager
 =======
 # Happy Package (happy_package)
 
-A work in progress package manager for Vita and PS3.
+A work in progress package manager for Vita and PS3.  Built with Quasar Vue 2 and Electron
 
 ## TODO
 - [x] Base App Skeleton
