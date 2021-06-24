@@ -1,31 +1,16 @@
-<<<<<<< HEAD
+
 # HappyPackage
 Vita / PS3 Package Manager
 =======
-# Happy Package (happy_package)
 
-Package Manager
+A work in progress package manager for Vita and PS3.  Built with Quasar Vue 2 and Electron
 
-## Install the dependencies
-```bash
-npm install
-```
-
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-quasar dev
-```
-
-### Lint the files
-```bash
-npm run lint
-```
-
-### Build the app for production
-```bash
-quasar build
-```
-
-### Customize the configuration
-See [Configuring quasar.conf.js](https://v1.quasar.dev/quasar-cli/quasar-conf-js).
->>>>>>> 2f9fef1... init
+## TODO
+- [x] Base App Skeleton
+- [ ] Basic USB Backup Functionality ( System -> PC, PC -> System, Delete from System)
+- [ ] FTP Backup Functionality
+- [ ] Expand Options (Library Location)
+- [ ] TSVFile Viewer
+- [ ] Package Downloader
+- [ ] PKG2ZIP option
+- [ ] VitaDB Browswer Integration
