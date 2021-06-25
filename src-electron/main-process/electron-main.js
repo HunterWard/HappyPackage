@@ -106,7 +106,7 @@ usb.on('remove', function(device) {
 app.on('ready', createWindow)
 
 if (isFirstAppLaunch()) {
-
+  store.set('libpath', electron.getPath(''))
   store.set('devices', [])
 }
 
